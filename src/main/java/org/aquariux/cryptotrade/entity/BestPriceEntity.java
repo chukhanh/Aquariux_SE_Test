@@ -17,7 +17,6 @@ public class BestPriceEntity {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(unique = true)
     private String symbol;
     private BigDecimal bestBid;
     private BigDecimal bestAsk;

@@ -4,15 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21c4e93a-178d-4faa-ab33-68039807f7fa" name="Changes" comment="fix JWT and login">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/AggregatedPriceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/BestPriceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/TradeTransactionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/WalletBalanceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/BestPriceRepository.java" afterDir="false" />
+    <list default="true" id="21c4e93a-178d-4faa-ab33-68039807f7fa" name="Changes" comment="add some data and Repository">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/common/RestTemplateApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/config/AsyncConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/controller/PriceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/controller/TradeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/controller/WalletController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/dto/PriceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/dto/TradeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/enumData/Exchange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/AggregatedPriceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/TradeTransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/WalletBalanceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/scheduler/PriceAggregatorScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/BestPriceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/PriceAggregatorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/TradeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/WalletService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/BestPriceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/PriceAggregatorServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/TradeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/WalletServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/BestPriceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/BestPriceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -90,6 +109,9 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/schema" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.aquariux.cryptotrade.repository" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CryptotradeApplication">
     <configuration name="user.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
@@ -146,7 +168,7 @@
       <updated>1762355328154</updated>
       <workItem from="1762355329294" duration="823000" />
       <workItem from="1762356157617" duration="106000" />
-      <workItem from="1762356316185" duration="15427000" />
+      <workItem from="1762356316185" duration="24287000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -180,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762422762798</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add some data and Repository">
+      <option name="closed" value="true" />
+      <created>1762437206474</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762437206474</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +221,7 @@
     <MESSAGE value="Commit for config Database" />
     <MESSAGE value="Commit for user add JWT" />
     <MESSAGE value="fix JWT and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix JWT and login" />
+    <MESSAGE value="add some data and Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some data and Repository" />
   </component>
 </project>
