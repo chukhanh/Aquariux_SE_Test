@@ -4,27 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21c4e93a-178d-4faa-ab33-68039807f7fa" name="Changes" comment="Commit for user add JWT">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cryptotrade.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="21c4e93a-178d-4faa-ab33-68039807f7fa" name="Changes" comment="fix JWT and login">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/AggregatedPriceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/BestPriceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/TradeTransactionEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/WalletBalanceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/BestPriceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/common/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/common/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/config/DatabaseConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/dto/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +146,7 @@
       <updated>1762355328154</updated>
       <workItem from="1762355329294" duration="823000" />
       <workItem from="1762356157617" duration="106000" />
-      <workItem from="1762356316185" duration="13716000" />
+      <workItem from="1762356316185" duration="15427000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -184,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762361302578</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix JWT and login">
+      <option name="closed" value="true" />
+      <created>1762422762798</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762422762798</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,17 +190,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Commit for config Database" />
     <MESSAGE value="Commit for user add JWT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit for user add JWT" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/aquariux/cryptotrade/service/impl/UserServiceImpl.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix JWT and login" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix JWT and login" />
   </component>
 </project>

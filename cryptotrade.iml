@@ -7,7 +7,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="cryptotrade" value="11f9c1d7-5f9d-4c53-81b5-b7fc58e6d285" />
-          <factory-entry name="entityManagerFactory" value="11f9c1d7-5f9d-4c53-81b5-b7fc58e6d285" />
+          <factory-entry name="entityManagerFactory" value="4affdadd-dc31-46c4-b694-1c9a4b34a326" />
         </datasource-mapping>
         <naming-strategy-map>
           <unit-entry name="entityManagerFactory" />
