@@ -1,20 +1,24 @@
 package org.aquariux.cryptotrade.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "user")
+@Table(name = "USERS")
+@Data
 @Getter
 @Setter
 public class UserEntity {
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long ID;
 
-   private String username;
-   private String password;
-   private String role;
+    @Column(nullable = false, name = "USERNAME")
+    private String username;
+    @Column(nullable = false, name = "PASSWORD")
+    private String password;
+    @Column(nullable = false, name = "ROLE")
+    private String role;
 }
